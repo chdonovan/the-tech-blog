@@ -1,18 +1,15 @@
-const { Model, DataTypes } = require('sequelize'); // Import these two objects from Sequelize. 
+const { Model, DataTypes } = require('sequelize');  
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
-
-// Create the "Blogger" as an extension of Sequelize's native "Model" object.
 class Blogger extends Model {
-  // Set up method to run on instance data (per Blogger) to check password
+  // password
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-// Define table columns and configuration. 
-// Initialize the model's data and configuration, passing in two objects as arguments.
+
 Blogger.init(
   {
     id: {
@@ -53,10 +50,10 @@ Blogger.init(
       }
     },
     sequelize,
-    timestamps: false, // Don't automatically create createdAt/updatedAt timestamp fields.
-    freezeTableName: true, // Don't pluralize name of database table.
-    underscored: true, // Use underscores instead of camel-casing (i.e. `comment_text` and not `commentText`)
-    modelName: 'blogger' // Ensure model name remains lowercase in the database.
+    timestamps: false, 
+    freezeTableName: true, 
+    underscored: true,
+    modelName: 'blogger'
   }
 );
 
