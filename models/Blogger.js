@@ -9,7 +9,6 @@ class Blogger extends Model {
   }
 }
 
-
 Blogger.init(
   {
     id: {
