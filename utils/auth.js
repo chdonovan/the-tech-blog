@@ -4,6 +4,6 @@ const userAuth = (req, res, next) => {
     } else {
       next();
     }
-  };
+};
   
-  module.exports = userAuth;
+module.exports = userAuth;

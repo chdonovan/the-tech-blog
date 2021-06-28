@@ -22,7 +22,7 @@
       {{#each posts as |post|}}
       <li>
         {{> post-info post}}
-        <a href="/views/dashboard.handlebars" href="edit-blog-post.handlebars" class="edit-link">Edit post</a>
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
         <hr>
       </li>
       {{/each}}
@@ -32,4 +32,4 @@
 </div>
 
 {{!-- Link this file to the template. --}}
-<script src="/public/js/add-post.js"></script>
+<script src="/javascript/add-post.js"></script>

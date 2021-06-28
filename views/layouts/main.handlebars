@@ -5,22 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/assets/stylesheets/style.css">
 </head>
 
 <body class="bg-img">
 
   <header>
     <h1>
-      THE Tech Blog
+      Tech Blog
     </h1>
     <nav>
       <a href="/">Home |</a>
       {{#if loggedIn}}
-      <a href="/views/dashboard.handlebars">My Dashboard |</a>
+      <a href="/dashboard">My Dashboard |</a>
       <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
-      <a href="/views/login.handlebars"> Login</a>
+      <a href="/login"> Login</a>
       {{/if}}
     </nav>
   </header>
@@ -28,11 +28,11 @@
     {{{ body }}}
   </div>
   <footer>
-    Brought to you by <a href="https://github.com/chdonovan" target="_blank"> chris donovan</a>
+    Brought to you by <a href="https://github.com/chdonovan" target="_blank"> Chris Donovan</a>
   </footer>
 
   {{#if loggedIn}}
-  <script src="/public/js/logout.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
 
 </body>
