@@ -1,6 +1,6 @@
 <div class="flexcolumn">
   <article class="edit-new">
-    <a href="/dashboard"> &larr; Back to dashboard</a>
+    <a href="/views/dashboard.handlebars"> &larr; Back to dashboard</a>
     <h2>
       Edit Post
     </h2>
@@ -13,7 +13,7 @@
         <textarea name="post-content" type="text">{{post.post_content}}</textarea>
       </div>
       <div>
-        <a href="/blogpost/{{post.id}}">{{post.comments.length}}
+        <a href="/views/blog-post.handlebars">{{post.comments.length}}
           {{format_plural "comment" post.comments.length}}</a>
       </div>
 
